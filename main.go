@@ -498,7 +498,7 @@ func (app *App) kickUnverified(id int, update tg.Update, permanent bool) bool {
 	msg := tg.NewMessage(
 		update.Message.Chat.ID,
 		fmt.Sprintf(
-			"⏱ User %d dikeluarkan karena tidak menjawab captcha lebih dari 5 menit.",
+			"⏱ User %d dikeluarkan kerana tidak menjawab captcha lebih dari 5 minit.",
 			id,
 		),
 	)
