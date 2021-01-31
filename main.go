@@ -200,7 +200,7 @@ func (app *App) handle(update tg.Update) {
 
 				// Verified Message
 				text := fmt.Sprintf(
-					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang anda sudah boleh mula chat bersama dengan rakan-rakan di @twt_jogging 🤗",
+					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang anda sudah boleh mula chat bersama dengan rakan-rakan di dalam group 🤗",
 					update.Message.From.FirstName,
 					update.Message.From.ID,
 				)
