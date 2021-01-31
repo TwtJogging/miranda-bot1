@@ -1,6 +1,6 @@
 module miranda-bot
 
-go 1.11
+go 1.14.2
 
 require (
 	github.com/denisenkom/go-mssqldb v0.0.0-20200428022330-06a60b6afbbc // indirect
