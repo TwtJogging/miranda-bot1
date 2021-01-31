@@ -200,7 +200,7 @@ func (app *App) handle(update tg.Update) {
 
 				// Verified Message
 				text := fmt.Sprintf(
-					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang kamu bisa mengirim pesan 🤗",
+					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang anda sudah boleh mula chat bersama dengan rakan-rakan di @twt_jogging 🤗",
 					update.Message.From.FirstName,
 					update.Message.From.ID,
 				)
@@ -321,7 +321,7 @@ func (app *App) handle(update tg.Update) {
 					msg := tg.NewMessage(
 						update.Message.Chat.ID,
 						fmt.Sprintf(
-							"Member *%s* (%d) dikeluarkan karena terindikasi Spammer.\n\n[Check](https://cas.chat/query?u=%d)",
+							"Member *%s* (%d) dikeluarkan kerana didapati adalah Spammer.\n\n[Check](https://cas.chat/query?u=%d)",
 							member.FirstName,
 							member.ID,
 							member.ID,
@@ -372,7 +372,7 @@ func (app *App) handle(update tg.Update) {
 					}
 
 					text := fmt.Sprintf(
-						"Selamat datang [%s](tg://user?id=%d) 👋\n\nSilahkan balas dengan pesan `%s` dalam waktu 5 menit untuk memastikan kamu bukan bot.",
+						"Selamat datang [%s](tg://user?id=%d) 👋\n\nSila pastikan anda menaip semula dengan text berikut `%s` dalam waktu 5 minit untuk memastikan kamu bukan bot jahat.",
 						member.FirstName,
 						member.ID,
 						captcha.Code,
