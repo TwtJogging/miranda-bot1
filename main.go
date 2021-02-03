@@ -239,7 +239,7 @@ func (app *App) handle(update tg.Update) {
 
 				// Delete verfied message after 3sec
 				go func() {
-					log.Printf("[captcha] Deleting message %d in 5 seconds...", r.Chat.ID)
+					log.Printf("[captcha] Deleting message %d in 20 seconds...", r.Chat.ID)
 					time.Sleep(3 * time.Second)
 
 					// Delete Pong after a few second
