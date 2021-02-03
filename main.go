@@ -240,7 +240,7 @@ func (app *App) handle(update tg.Update) {
 				// Delete verfied message after 3sec
 				go func() {
 					log.Printf("[captcha] Deleting message %d in 20 seconds...", r.Chat.ID)
-					time.Sleep(3 * time.Second)
+					time.Sleep(20 * time.Second)
 
 					// Delete Pong after a few second
 					pong := tg.DeleteMessageConfig{
@@ -333,7 +333,7 @@ func (app *App) handle(update tg.Update) {
 					if notice.MessageID > 0 {
 						// Delete after 3s
 						go func() {
-							time.Sleep(5 * time.Second)
+							time.Sleep(20 * time.Second)
 							log.Println("[cas] Deleting cas notice message after 3 second...")
 							bot.DeleteMessage(tg.NewDeleteMessage(update.Message.Chat.ID, notice.MessageID))
 						}()
@@ -508,7 +508,7 @@ func (app *App) kickUnverified(id int, update tg.Update, permanent bool) bool {
 	if notice.MessageID > 0 {
 		// Delete after 3s
 		go func() {
-			time.Sleep(3 * time.Second)
+			time.Sleep(20 * time.Second)
 			log.Println("[softkick] Deleting cas notice message after 3 second...")
 			bot.DeleteMessage(tg.NewDeleteMessage(update.Message.Chat.ID, notice.MessageID))
 		}()
