@@ -41,7 +41,7 @@ func (c *Command) Handle(cs string) {
 
 	case "twitter":
 		if c.IsFromGroup() {
-			c.Rules()
+			c.twitter()
 		} else {
 			log.Println("[report] unable call command from outside group")
 		}
