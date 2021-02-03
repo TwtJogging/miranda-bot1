@@ -9,7 +9,7 @@ import (
 
 // Rules send rules
 func (c Command) Rules() {
-	msg := tg.NewMessage(c.Message.Chat.ID, "<b>Peraturan</b>\n\nBaca: <a href='http://telegra.ph/Peraturan-BGLI-03-07'>Peraturan Grup BGLI</a>")
+	msg := tg.NewMessage(c.Message.Chat.ID, "<b>The TwtJogging Rules</b>\n\nBaca: <a href='https://twitter.com/twt_jogging'>Read here!</a>")
 	msg.ParseMode = "HTML"
 	msg.ReplyToMessageID = c.Message.MessageID
 
@@ -22,8 +22,8 @@ func (c Command) Rules() {
 	}
 
 	go func() {
-		log.Printf("Deleting message %d in 10 seconds...", r.Chat.ID)
-		time.Sleep(10 * time.Second)
+		log.Printf("Deleting message %d in 15 seconds...", r.Chat.ID)
+		time.Sleep(15 * time.Second)
 
 		// Delete !rules
 		rules := tg.DeleteMessageConfig{
