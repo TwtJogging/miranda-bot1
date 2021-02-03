@@ -45,6 +45,13 @@ func (c *Command) Handle(cs string) {
 		} else {
 			log.Println("[report] unable call command from outside group")
 		}
+		
+	case "marathon":
+		if c.IsFromGroup() {
+			c.Twitter()
+		} else {
+			log.Println("[report] unable call command from outside group")
+		}
 	case "adm", "admin":
 		c.AdminList()
 	}
