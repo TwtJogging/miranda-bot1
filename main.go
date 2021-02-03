@@ -200,7 +200,7 @@ func (app *App) handle(update tg.Update) {
 
 				// Verified Message
 				text := fmt.Sprintf(
-					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang anda sudah boleh mula chat bersama dengan rakan-rakan di dalam group 🤗",
+					"Verifikasi berhasil [%s](tg://user?id=%d) 👍\nSekarang anda sudah boleh mula chat bersama dengan rakan-rakan di dalam group 🤗 This bot developed by (@zaimiezainal)",
 					update.Message.From.FirstName,
 					update.Message.From.ID,
 				)
@@ -239,7 +239,7 @@ func (app *App) handle(update tg.Update) {
 
 				// Delete verfied message after 3sec
 				go func() {
-					log.Printf("[captcha] Deleting message %d in 3 seconds...", r.Chat.ID)
+					log.Printf("[captcha] Deleting message %d in 5 seconds...", r.Chat.ID)
 					time.Sleep(3 * time.Second)
 
 					// Delete Pong after a few second
