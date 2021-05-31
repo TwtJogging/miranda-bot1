@@ -372,7 +372,7 @@ func (app *App) handle(update tg.Update) {
 					}
 
 					text := fmt.Sprintf(
-						"***Selamat datang*** [%s](tg://user?id=%d) 👋\n\nI am a bot, and this action was performed automatically.\n\nPlease retype the text ***below*** or you will kick! from the group in next 5 minutes\n\n<!---retype the text below 👇👇👇--->`%s`",
+						"***Selamat datang*** [%s](tg://user?id=%d) 👋\n\nI am a bot, and this action was performed automatically.\n\nPlease retype the text ***below*** or you will kick! from the group in next 5 minutes\n\nretype the text ***below*** 👇👇👇`%s`",
 						member.FirstName,
 						member.ID,
 						captcha.Code,
