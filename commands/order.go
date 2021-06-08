@@ -9,7 +9,7 @@ import (
 
 // Rules send rules
 func (c Command) Order() {
-	msg := tg.NewMessage(c.Message.Chat.ID, "<b>Senarai order baju running di TwtJogging.</b>-3 minit bacaan\n\nBaca: <a href='https://t.me/pacrbot'>Read here!</a>\n\n1: @amirasyrafwoi -<b>Size M</b>\n\n1: @afqazt -<b>Size M</b>\n\n2: @KerolWan -<b>Saiz: L</b>\n\n3: Irsyaduddin Ismail -<b>Size M</b>\n\n4: @dzu_im -<b>Update payment</b>\n\n5: @kayyyyyyy -<b>Update payment</b>")
+	msg := tg.NewMessage(c.Message.Chat.ID, "<b>Senarai order baju running di TwtJogging.</b>-3 minit bacaan\n\nTERIMA KASIH kerana membeli dengan twtjogging, kami menghargai sokongan anda. <a href='https://t.me/pacrbot'>Read here!</a>\n\n1: @amirasyrafwoi -<b>Size M</b>\n\n1: @afqazt -<b>Size M</b>\n\n2: @KerolWan -<b>Saiz: L</b>\n\n3: Irsyaduddin Ismail -<b>Size M</b>\n\n4: @dzu_im -<b>Update payment</b>\n\n5: @kayyyyyyy -<b>Update payment</b>")
 	msg.ParseMode = "HTML"
 	msg.ReplyToMessageID = c.Message.MessageID
 
