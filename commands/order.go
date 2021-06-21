@@ -9,7 +9,7 @@ import (
 
 // Rules send rules
 func (c Command) Order() {
-	msg := tg.NewMessage(c.Message.Chat.ID, "<b>Senarai status order baju running di TwtJogging.</b>-3 minit bacaan\n\nTERIMA KASIH kerana membeli dengan twtjogging, kami menghargai sokongan anda. <a href='https://t.me/pacrbot'>Read here!</a>\n\n1: @amirasyrafwoi -<b>Size M</b>\n2: @afqazt -<b>Size M</b>\n3: @KerolWan -<b>Saiz: L</b>\n4: Irsyaduddin Ismail -<b>Size M</b>\n5: @dzu_im -<b>Size XS</b>\n6: @kayyyyyyy -<b>twtjoggingtee L</b>\n7: Hasbullah Salleh -<b>twtjoggingtee L</b>\n8: khirulrizwan -<b>twtjoggingtee L</b>\n9: @amnnosmn-<b>twtjoggingtee L</b>\n10: @maissssssssss -<b>twtjoggingtee L</b>\n11: Atirah Senin -<b>twtjoggingtee L</b>\n12: @KerolWan -<b>twtjoggingtee L</b>\n13: HABIBAH BINTI HAMID -<b>twtjoggingtee L</b>")
+	msg := tg.NewMessage(c.Message.Chat.ID, "<b>Senarai status order baju running di TwtJogging.</b>-3 minit bacaan\n\nTERIMA KASIH kerana membeli dengan twtjogging, kami menghargai sokongan anda. <a href='https://t.me/pacrbot'>Read here!</a>\n\n1: @bonrakter -<b>Garmin 735xt no parcel EP810747135MY</b>\n2: @KerolWan -<b>Tshirt no parcel EP810747545MY</b>")
 	msg.ParseMode = "HTML"
 	msg.ReplyToMessageID = c.Message.MessageID
 
