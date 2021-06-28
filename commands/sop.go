@@ -8,7 +8,7 @@ import (
 )
 
 // Rules send rules
-func (c Command) SOP() {
+func (c Command) sop() {
 	msg := tg.NewMessage(c.Message.Chat.ID, "<b>SOP terbaru dalam Sukan Dan Rekreasi yang telah dikemaskini.</b>-3 minit bacaan\n\nSentiasa ikuti SOP yang telah ditetapkan oleh MKN <a href='https://t.me/MKNRasmi'>Read here!</a>\n\n1: Aktiviti jogging dibenarkan secara individu atau solo run, hanya di dalam kawasan kejiranan sahaja.<b>#KITAJAGAKITA</b>")
 	msg.ParseMode = "HTML"
 	msg.ReplyToMessageID = c.Message.MessageID
