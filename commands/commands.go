@@ -48,7 +48,7 @@ func (c *Command) Handle(cs string) {
 		
 	case "sop":
 		if c.IsFromGroup() {
-			c.Order()
+			c.Sop()
 		} else {
 			log.Println("[report] unable call command from outside group")
 		}
