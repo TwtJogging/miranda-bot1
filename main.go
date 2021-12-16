@@ -346,7 +346,7 @@ func (app *App) handle(update tg.Update) {
 					tx := app.DB.Begin()
 
 					var captcha models.UserCaptcha
-					code := 42.195
+					code := "42.195"
 
 					if err := tx.Where("user_id = ?", member.ID).First(&captcha).Error; err != nil {
 						// Unexpected error
