@@ -346,7 +346,7 @@ func (app *App) handle(update tg.Update) {
 					tx := app.DB.Begin()
 
 					var captcha models.UserCaptcha
-					code := randomStr(5)
+					code := 42.195
 
 					if err := tx.Where("user_id = ?", member.ID).First(&captcha).Error; err != nil {
 						// Unexpected error
@@ -372,7 +372,7 @@ func (app *App) handle(update tg.Update) {
 					}
 
 					text := fmt.Sprintf(
-						"***Selamat datang*** [%s](tg://user?id=%d) 👋\n\nPlease retype the ***NUMBERS*** below or you will kick! from the group in next 5 minutes\n\n👇👇👇 retype the ***NUMBERS*** below\n\n`%s`",
+						"***Selamat datang*** [%s](tg://user?id=%d) 👋\n\nDistance, distance, distance. What is the actual distance for the ***MARATHON*** ?? If wrong answer, you will kick! from the group in next 5 minutes\n\n👇👇👇 type the correct ***MARATHON*** distance in KM below\n\n`%s`",
 						member.FirstName,
 						member.ID,
 						captcha.Code,
